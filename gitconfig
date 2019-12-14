@@ -1,0 +1,48 @@
+[user]
+    name = Evgeni "Eugene" Kirilov
+    email = ekirilov@enova.com
+
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto
+
+[alias]
+    p = push
+    s = status
+    co = checkout
+    cl = clone
+
+    ammend = commit --amend
+    undo = reset --soft HEAD^   # Unstages the last commit while keeping its changes
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+
+[remote]
+#    pushDefault = lego
+
+[rerere]
+	enabled = true
+[hub]
+	host = git.enova.com
+[core]
+  # autocrlf = true
+
+  # Use Sublime Text as the default text editor
+  editor = subl -n -w
+
+  # Don't consider trailing space change as a cause for merge conflicts
+  whitespace = -trailing-space
+
+[diff]
+  # Show renames/moves as such
+  renames = true
+
+[status]
+  # Display submodule rev change summaries in status
+  submoduleSummary = true
+  
+  # Recursively traverse untracked directories to display all contents
+  showUntrackedFiles = all
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/

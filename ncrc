@@ -1,0 +1,20 @@
+#/usr/bin/env bash
+
+################################################################################
+#   0. NCJ / NCONJURE
+################################################################################
+#   Create an installment loan
+#	----------------------------------------------------------------------------
+    function loan
+    {
+      ncj account create --region=VA
+      ncj loan apply --current --with-lender-decision --disbursement_amount=1000 --product=netcredit
+    }
+
+#   Create a line of credit using ncj
+#	----------------------------------------------------------------------------
+    function loc
+    {
+      ncj account create --region=UT
+      ncj loan apply --current --with-lender-decision --disbursement_amount=500 --product=netcredit_line_of_credit
+    }

@@ -1,0 +1,9 @@
+#   KEY REMAPPING
+#   ----------------------------------------------------------------------------
+#   backward-word & forward-word are handled by iterm2's "Natural Text" profile
+
+#   ARROW UP: history-search-backward
+    "\e[A": history-search-backward
+
+#   ARROW DOWN: history-search-forward
+    "\e[B": history-search-forward
